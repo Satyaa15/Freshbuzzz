@@ -1,0 +1,135 @@
+{% extends 'store/main.html' %}
+{% block content %}
+<style>
+  .aboutSection{
+    margin-bottom: 120px;
+  }
+  .aboutBack{
+    height: 250px;
+    width: 100%;
+    background-color: #8b8b8b;
+  }
+  .aboutMember{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 90px;
+  }
+  .aboutMember h4{
+    margin-top: -15px
+  }
+  .aboutMember img{
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+  }
+  .pooja{
+    position: absolute;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+  }
+  .pooja1{
+    position: absolute;
+    right: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Satya{
+    position: absolute;
+    center: -10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutMember .links{
+    display: flex;
+  }
+
+  .links a{
+    color: #000000;
+    margin: -6px 10px;
+  }
+  
+  .shape1{
+    position: absolute;
+    background-color: #0feab034;
+    height: 900px;
+    width: 900px;
+    transform: rotate(45deg);
+    z-index: -1;
+    left: 90%;
+    top: -60%;
+  }
+  .shape2{
+    position: absolute;
+    background-color: #e4107334;
+    height: 240px;
+    width: 240px;
+    z-index: -1;
+    top: 570px;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+  }
+
+</style>
+<div class="shape1"></div>
+<div class="shape2"></div>
+<br>
+<h1 class="textCenter">About Us</h1><br>
+<a class="darkBtn" style="margin: 30px 0 20px 115px" href="{% url 'store_page' %}">&#x2190; Continue Shopping</a>
+<div class="aboutContainer">
+
+  <p class="aboutSection">Our FreshBuzz selling website offers a wide range of fresh and organic vegetables,Fruits & Sprouts  grown using sustainable farming practices. We are committed to providing high-quality produce at affordable prices, with fast and reliable shipping. FreshBuzz  is easy to navigate. We Provide a secure platform for you to get fresh and healthy vegetables grown with love by our local farmers. With our commitment to quality and customer satisfaction, we aim to be your go-to source for fresh, organic vegetables.
+  <br><br>
+  Our secret?
+  <br> Fruits, vegetables, and sprouts are rich in nutrients, but they can spoil quickly due to natural ripening gases like ethylene. Our innovative freshness-preserving techniques help ensure that your produce retains its nutrients and stays fresher for longer. By carefully managing storage conditions, we reduce spoilage, allowing you to enjoy crisp, flavorful fruits, vegetables, and sprouts at their peak. With our approach, you and your family can savor the freshest, most nutritious produce without the worry of premature spoilage!  <br><br>
+  Shop now to see the difference for yourself, and take advantage of our vegetables, all at affordable prices. Plus, with our fast and convenient delivery options, you can have fresh produce delivered straight to your doorstep in no time. Thank you for choosing us as your trusted source for healthy, high-quality vegetables, Fruits and Sprouts  .  
+  </p>
+
+  <div class="aboutTeam">
+    <div class="aboutBack">
+      <h1 class="textCenter" style="padding-top: 100px; color: #ffffff">Our Team</h1>
+    </div>
+    <div class="aboutMember">
+      <div class="pooja">
+        <img src="https://media.licdn.com/dms/image/D5603AQGdsF91gk-aFg/profile-displayphoto-shrink_800_800/0/1666881988490?e=1686787200&v=beta&t=H2Qnvga59u85lKChRBujlSWBqJujmWqVNTWAxBHa3kE" alt="">
+        <h3>Muskan Sinha</h3>
+        <h4>Student</h4>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/poojadhav/" target="_blank"><i class="fa-brands fa-linkedin"></i></a><br>
+          <a href="https://github.com/Poojadhav313" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/muski_0208/profilecard/?igsh=cm83cGN4bWkyam4%3D
+          " target="_blank"><i class="fa-brands fa-instagram"></i></a><br>
+        </div>
+      </div>
+
+      <div class="pooja1">
+        <img src="https://media.licdn.com/dms/image/D4D03AQFjBdMjXmZpUw/profile-displayphoto-shrink_200_200/0/1678011751328?e=1686787200&v=beta&t=22NOZoEtqFEjO1GDaZepoSC2ImEsshyRHqbd-pRL1PQ" alt="">
+        <h3>Mansi  Patil</h3>
+        <h4>Student</h4>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/sakshi-patil-036911268/" target="_blank"><i class="fa-brands fa-linkedin"></i></a><br>
+          <a href="https://github.com/Sakshipatil1611" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/sakshipatil1611/" target="_blank"><i class="fa-brands fa-instagram"></i></a><br>
+        </div>
+      </div>
+      <div class="Satya">
+        <img src="https://media.licdn.com/dms/image/D4D03AQFjBdMjXmZpUw/profile-displayphoto-shrink_200_200/0/1678011751328?e=1686787200&v=beta&t=22NOZoEtqFEjO1GDaZepoSC2ImEsshyRHqbd-pRL1PQ" alt="">
+        <h3>Satyanarayan Swamy</h3>
+        <h4>Student</h4>
+        <div class="links">
+          <a href="https://www.linkedin.com/in/satyanarayan-swami-9b3196233?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="fa-brands fa-linkedin"></i></a><br>
+          <a href="https://github.com/Satyaa15" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://www.instagram.com/satyaa__15/profilecard/?igsh=MXhlaDMwZmh4aGFiYQ==" target="_blank"><i class="fa-brands fa-instagram"></i></a><br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% endblock %}

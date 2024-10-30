@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Pooja Jadhav">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/47ccd04704.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Lily+Script+One&display=swap" rel="stylesheet"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap" rel="stylesheet">
+
+  <title>FreshBuzz</title>
+
+<style>
+  
+  body{
+    /* background-color:#c5c5c53b;  */
+    /* background-color:#fffef2;   */
+    background-color:#ffffff;  
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif; 
+    
+    margin: 0;
+    padding: 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  img{
+    user-select: none;
+    /* -webkit-user-drag: none;  */ 
+  }
+
+  .textCenter{
+    text-align: center;
+  }
+
+  .fa-star{
+    color: #fbff00
+  }
+
+  /* --------buttons----------- */
+
+  .greenBtn{
+    border: 1px solid #caf2c2;
+    color: white;
+    padding: 10px 15px;
+    margin-left: 5px;
+    font-size: 18px;
+    background-color: #538671;
+    border-radius: 13px;
+  }
+  .darkBtn{
+    border: 1px solid #538671;
+    color: #538671;
+    padding: 10px 15px;
+    border-radius: 13px;
+    transition: 0.3s;
+  }
+  .darkBtn:hover{
+    background: #538671;
+    color: white;
+  }
+
+
+  
+  /* ----NAVBAR----- */
+
+  .navbar{
+  padding: 10px 25px;
+  /* background-color: #2b2c30; */
+  background-color: #14e475;
+  color: #EAE7B1;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+.navbar a{
+  margin: 0 10px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  /* color: #808080; */
+  color : #edf2d3;
+}
+.navbar a:hover{
+  color: #ffffff;
+}
+  .nav{
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+  }
+  .nav, .nav-left, .nav-right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  #brandName{
+    font-size: 45px;
+    color : #edf2d3;
+    letter-spacing: 0.5px;
+    margin-left: -8px;
+    margin-top: -10px;
+    margin-right: 20px;
+    font-family: 'Lobster Two', cursive;
+  }
+
+  #cartIcon{
+    display: inline-block;
+    margin-left: 15px;
+  }
+
+  /* -------store---------- */
+  .row{
+    margin: 40px 7%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 170vw 
+  }
+  .col{
+    width: 270px;
+    height: 300px; 
+    margin: 5px 15px 30px 15px;
+    
+  }
+  .boxElement{
+    /* background-color: #fff; */
+    border-radius: 15px; 
+    background-color: #fffef2;
+    padding: 10px;
+    box-shadow:#cccccc 0 0 25px;
+  }
+
+  .itemName{
+    margin-top: 15px
+  }
+
+
+  .itemCol{
+    width: 255px;
+    /* height: 355px; */
+    height: 330px; 
+    border-radius: 15px;
+    border: 1px solid #6b6b6b38;
+    border: 1px solid #2e2e2e38;
+  }
+  .itemCol:hover{
+    box-shadow:#6b6b6b38 0 0 15px;
+  }
+  .itemCol .boxElement{
+    border-radius: 0 0 15px 15px;
+    box-shadow:#6b6b6b38 0 0 0px;
+  }
+  .itemName{
+    font-size: 20px;
+    margin-left: 5px;
+    margin-bottom: 19px;
+  }
+
+  .thumbnail{
+    width: 255px;
+    height: 170px;
+    margin-bottom: -5px;
+    border-radius: 15px  15px  0 0 
+    
+    }
+    
+    .itemPrice{
+      display: inline-block; 
+      float: left;
+      color: #000000;
+      margin-top: 12px; 
+      margin-left: 5px;
+      font-size: 20px;
+
+    }
+    
+    
+    /* ------cart-------- */
+    .cartIMG{
+    margin-left: 20px;
+    width: 130px;
+    height: 100px;
+  }
+  
+
+  
+  .cartRow{
+    display: flex;
+    align-items: flex-stretch;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ececec;
+    
+  }
+  .priceTotal{
+    text-align:right; 
+    margin-right:60px; 
+    font-weight: normal; 
+    font-size: 18px
+  }
+
+  /* -----------checkout----------- */
+  .checkoutFlex{
+    display: flex;
+    width: 70vw;
+    justify-content: space-between;
+  }
+  .checkoutIMG{
+    margin-left: 20px;
+    width: 85px;
+    height: 65px;
+  }
+  .shippingInfo{
+    width: 500px;
+    margin-top: 20px;
+  }
+  .orderSummary{
+    width: 500px;
+  }
+  
+  /* ----------orders----------- */
+  .orderComplete{
+    padding: 5px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(4, 121, 4);
+  }
+  .orderPending {
+    padding: 5px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(235, 158, 17);
+  }
+
+  /* ------------------forms------------ */
+  .centerForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .formContainer{
+    padding: 50px;
+    font-size: 18px;
+    box-shadow: none;
+  }
+  .formAlert{
+    padding: 10px;
+    margin: 30px 30px 30px 0;
+    width: 95%;
+    font-size: 19px;
+    background: #ff8f8f;
+    border: 1px solid #ff0000;
+    color: #800000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .formSuccess{
+    padding: 10px;
+    margin: 5px 30px 30px 30px;
+    width: 95%;
+    font-size: 19px;
+    background: #8fff95;
+    border: 1px solid #2bff00;
+    color: #0f8000;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  .formInput{
+    padding: 10px;
+    font-size: 18px;
+    width: 400px;
+    border-radius: 5px;
+    border:rgb(122, 122, 122) 1px solid;
+  }
+  .formInput:focus{
+    border: none;
+  }
+  input[type="submit"]{
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  /* -----------about us page------------ */
+  .aboutContainer{
+    margin: 80px 100px;
+    margin-bottom: 200px;
+    font-size: 20px;
+  }
+  
+
+
+  /* -------------------account info popup------------------ */
+  .popupContainer {
+  position: relative;
+  color : #edf2d3;
+}
+
+.popupContainer .logoutBtn{
+  margin: 10px 90px;
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: 0.3s;
+  border: 1px solid #7a7a7a
+}
+.popupContainer .logoutBtn:hover{
+  background-color: #2a443b
+}
+
+.popupOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.705);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.popupOverlay:target {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup, .popup2 {
+  position: absolute;
+  top: 10%;
+  left: 75%;
+  /* transform: translate(-50%, -50%); */
+  background: #3C6255;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popupClose {
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+  cursor: pointer;
+}
+.popHead {
+  display: flex;
+  margin-top: -30px;
+}
+
+.popFlex{
+  display:flex;
+  align-items: center;
+}
+
+.popFlex i{
+  margin-right: 15px;
+  font-size: 25px;
+}
+
+.popFlex p{
+  font-size: 20px;
+}
+/* Hide the link when the popup is open */
+.popupOverlay:target ~ #popupLink {
+  display: none;
+}
+
+</style>  
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="nav">
+      <div class="nav-left">
+        <a href="{% url 'home_page' %}" id="brandName">FreshBuzz</a>
+        
+      </div>
+      
+      <div class="nav-right">
+        <a href="{% url 'store_page' %}">Store</a>
+        <a href="{% url 'aboutus_page' %}">About us</a>
+        <a href="{% url 'faq_page' %}">FAQ</a>
+        <a href="{% url 'cart_page' %}">Cart
+          <!-- <i class="fa-solid fa-cart-shopping"></i> -->
+        </a>
+
+      {% if request.session.customer %}
+      <!-- account info pop up start -->
+      <a href="#popup" class="nav-link" id="popupLink"><i class="fa-solid fa-user"></i></a>
+        
+        <div class="popupContainer">
+          <div class="popupOverlay" id="popup">
+            <div class="popup">
+              <div class="popHead">
+                <h2 style="margin-top:20px">Account</h2>
+                <a href="#" class="popupClose"><i class="fa-solid fa-x"></i></a>
+              </div>
+              <div class="popFlex">
+                <i class="fa-solid fa-user"></i>
+                <p>{{ request.session.customerName }}</p>
+              </div>
+              <!-- <div class="popFlex">
+                <i class="fa-solid fa-envelope"></i>
+                <p>{{ request.session.customerEmail }}</p>
+              </div> -->
+              <div class="popFlex">
+                <i class="fa-solid fa-phone"></i>
+                <p>{{ request.session.customerPhone }}</p>
+              </div><br>
+              <div class="popFlex">
+                <a class="nav-link greenBtn" href="{% url 'orders_page' %}">Order history</a>
+              </div><br><br>
+              <a class="nav-link logoutBtn" href="{% url 'logout_page' %}">Log out</a>
+              </div><br>
+          </div>
+        </div>
+    <!-- account info pop up end -->
+    
+    {% else %}
+      <a class="nav-link loginbtn" href="{% url 'login_page' %}">Login</a>
+      <a class="nav-link" href="{% url 'signup_page' %}">Signup</a>
+    {% endif %}
+
+      </div>
+    </div>
+  </nav>
+
+  {% block content %}
+<!-- ------------------------------------------------------------------------- -->
+  {% endblock %}
+
+</body>
+</html>
